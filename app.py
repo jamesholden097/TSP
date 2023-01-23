@@ -203,13 +203,15 @@ class App(customtkinter.CTk):
         elif new_map == "Google satellite":
             self.map_widget.set_tile_server("https://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}&s=Ga", max_zoom=22)
 
-    def on_closing(self, event=0):
-        # self.destroy()
-        self.quit()
-        sys.exit(0)
+
     def start(self):
         self.mainloop()
 
+    def on_closing(self, event=0):
+        print("Shutting Down")
+        self.destroy()
+        self.quit()
+        sys.exit(0)
 
 if __name__ == "__main__":
     app = App()

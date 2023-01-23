@@ -3,10 +3,11 @@ import time
 import random
 import warnings
 import numpy as np
+import osmnx.distance
 import osmnx as ox
 import networkx as nx
-from datetime import timedelta
 from threading import Thread
+from datetime import timedelta
 from multiprocessing import Process, Queue
 from python_tsp.exact import solve_tsp_dynamic_programming
 
